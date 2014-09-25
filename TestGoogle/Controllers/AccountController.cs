@@ -354,7 +354,7 @@ namespace TestGoogle.Controllers
         // POST: /Account/ExternalLoginConfirmation
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl)
         {
             if (User.Identity.IsAuthenticated)
