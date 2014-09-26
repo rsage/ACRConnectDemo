@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A6206E7-0EAA-45F9-B9CA-F2BE8E4389B0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestSecureAuthSvc</RootNamespace>
+    <AssemblyName>TestSecureAuthSvc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\SecureAuthMembershipSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecureAuthProfileSvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Service References\SecureAuthMembershipSvc\SecureAuth.ServiceModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthMembershipSvc\service.wsdl" />
+    <None Include="Service References\SecureAuthMembershipSvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthMembershipSvc\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthMembershipSvc\System.Web.Security.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthMembershipSvc\TestSecureAuthSvc.SecureAuthMembershipSvc.CreateUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecureAuthMembershipSvc\TestSecureAuthSvc.SecureAuthMembershipSvc.MembershipCreateStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecureAuthMembershipSvc\TestSecureAuthSvc.SecureAuthMembershipSvc.MembershipUserModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecureAuthProfileSvc\appliance.gosecureauth.com.wsdl" />
+    <None Include="Service References\SecureAuthProfileSvc\appliance.gosecureauth.com.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthProfileSvc\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthProfileSvc\SecureAuth.ServiceModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthProfileSvc\service.wsdl" />
+    <None Include="Service References\SecureAuthProfileSvc\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecureAuthProfileSvc\TestSecureAuthSvc.SecureAuthProfileSvc.OATHProvisionProperty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SecureAuthProfileSvc\TestSecureAuthSvc.SecureAuthProfileSvc.UserProfileProperty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SecureAuthMembershipSvc\" />
+    <WCFMetadataStorage Include="Service References\SecureAuthProfileSvc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecureAuthProfileSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecureAuthProfileSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecureAuthProfileSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecureAuthMembershipSvc\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecureAuthMembershipSvc\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SecureAuthMembershipSvc\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
