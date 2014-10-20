@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5f74e8d3-4e5c-47ee-9aa0-ce62c898edf8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://192.168.1.200/SecureAuth7/webservice/membershipws.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="21ebdefa-9b40-45a2-a3f3-e755d8ed0360" SourceId="1" SourceUrl="https://192.168.1.200/SecureAuth7/webservice/membershipws.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="a7601fa4-be12-43e6-b837-a273d0608bdf" SourceId="1" SourceUrl="https://192.168.1.200/SecureAuth7/webservice/membershipws.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="3ca65216-3244-4ead-aa07-454ce643fd65" SourceId="1" SourceUrl="https://192.168.1.200/SecureAuth7/webservice/membershipws.svc/mex" />
+    <MetadataFile FileName="SecureAuth.ServiceModel.xsd" MetadataType="Schema" ID="06f20f71-8ecd-45f2-80c5-01a3b6e0b556" SourceId="1" SourceUrl="https://192.168.1.200/SecureAuth7/webservice/membershipws.svc/mex" />
+    <MetadataFile FileName="System.Web.Security.xsd" MetadataType="Schema" ID="61e03720-8c7b-43aa-bf98-583222a625bb" SourceId="1" SourceUrl="https://192.168.1.200/SecureAuth7/webservice/membershipws.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
